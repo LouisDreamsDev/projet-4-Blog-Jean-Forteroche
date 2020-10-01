@@ -6,7 +6,7 @@
 </head>
 <body>
 <header>
-    <a href="http://localhost/blog/public/index.php"><h1>Billet simple pour L'Alaska</h1></a>
+    <a href="../public/index.php"><h1>Billet simple pour L'Alaska</h1></a>
     <p>par Jean Forteroche</p>
 <?php
 if ($this->session->get('pseudo')) {
