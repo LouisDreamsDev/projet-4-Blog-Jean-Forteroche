@@ -10,12 +10,15 @@
 foreach ($articles as $article)
 {
     ?>
-    <div>
-        <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h2>
-        <p><?= htmlspecialchars($article->getContent());?></p>
-        <p><?= htmlspecialchars($article->getAuthor());?></p>
-        <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
-    </div>
+    <div class="card bg-light mb-3">
+        <div class="card-header"><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?> </a></div>
+            <div class="card-body">
+                <p class="card-text"><?= substr(htmlspecialchars($article->getContent()), 0, 400);?>..</p>
+                <p class="card-text"><small class="text-muted">Jean Forteroche</small></p>
+                <a class="btn btn-primary card-link" href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>">Lire la suite</a>
+            </div>
+        </div>
+    </div>  
     <br>
     <?php
 }

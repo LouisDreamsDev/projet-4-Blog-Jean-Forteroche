@@ -27,7 +27,7 @@ if ($this->session->get('role') === 'admin')
         ?>
         <h4><?= htmlspecialchars($comment->getPseudo());?></h4>
         <p><?= htmlspecialchars($comment->getContent());?></p>
-        <p>Posté le <?= htmlspecialchars($comment->getCreatedAt());?></p>
+        <p class="text-muted">Posté le <?= htmlspecialchars($comment->getCreatedAt());?></p>
         <?php
         if($comment->isFlag()) {
             ?>

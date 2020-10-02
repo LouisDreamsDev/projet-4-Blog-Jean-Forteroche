@@ -85,7 +85,8 @@ class Router
         }
         catch (Exception $e)
         {
-            $this->errorController->errorServer();
+            $this->errorController->errorServer($e);
+            echo $e->getMessage();
         }
     }
 }
