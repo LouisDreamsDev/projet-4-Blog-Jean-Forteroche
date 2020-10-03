@@ -1,11 +1,28 @@
+@font-face
+{
+    font-family: fresh-tea;
+    src: url(../typo/FRESH_TEA-Demo.ttf);
+}
+#main-title 
+{
+    font-family: fresh-tea, serif;
+    font-size: 4rem;
+}
+header .btn-light
+{
+    margin: 0 8px 0 8px;
+}
 .card 
 {
     margin: auto;
     width: 64rem;
 }
-form 
+form
 {
-    margin:auto;
+}
+.form-group
+{
+    margin: auto;
     width: 300px;
 }
 
