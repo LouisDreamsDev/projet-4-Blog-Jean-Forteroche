@@ -11,7 +11,9 @@ class BackController extends Controller
         if(!$this->session->get('pseudo')) {
             $this->session->set('need_login', 'Vous devez vous connecter pour accéder à cette page');
             header('Location: ../public/index.php?route=login');
-        } else {
+        } 
+        else 
+        {
             return true;
         }
     }
@@ -22,7 +24,9 @@ class BackController extends Controller
         if(!($this->session->get('role') === 'admin')) {
             $this->session->set('not_admin', 'Vous n\'avez pas le droit d\'accéder à cette page');
             header('Location: ../public/index.php?route=profile');
-        } else {
+        } 
+        else 
+        {
             return true;
         }
     }

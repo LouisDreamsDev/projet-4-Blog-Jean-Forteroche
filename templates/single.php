@@ -1,25 +1,28 @@
 <?php $this->title = 'Article'; ?>
-<div>
-    <h2><?= htmlspecialchars($article->getTitle());?></h2>
-    <p><?= htmlspecialchars($article->getContent());?></p>
-    <p><?= htmlspecialchars($article->getAuthor());?></p>
-    <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
-</div>
-<?php
-if ($this->session->get('role') === 'admin')
-{
-    ?>
-    <hr>
-    <div class="actions">
-        <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
-        <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
+<div class="card text-center">
+    <div class="card-header">
+        <h2><?= htmlspecialchars($article->getTitle());?></h2>
     </div>
-    <hr>
-<?php
-}
-?>
+    <div class="card-body">
+        <p class="card-text"><?= htmlspecialchars($article->getContent());?></p>
+    </div>
+    <div class="card-footer text-muted">
+        <em>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></em>
+    </div>
+    <?php
+    if ($this->session->get('role') === 'admin')
+    {
+        ?>
+        <div class="actions card-footer">
+            <a class="btn btn-outline-info" href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
+            <a class="btn btn-danger" href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
+        </div>
+    <?php
+    }
+    ?>
+</div>
 <br>
-<div id="comments" class="text-left" style="margin-left: 50px">
+<div id="comments">
     <h3>Commentaires</h3>
     <?php
     foreach ($comments as $comment)
@@ -31,9 +34,11 @@ if ($this->session->get('role') === 'admin')
         <?php
         if($comment->isFlag()) {
             ?>
-            <p>Ce commentaire a déjà été signalé</p>
+            <p class="alert alert-warning">Ce commentaire a déjà été signalé.</p>
             <?php
-        } else {
+        } 
+        else 
+        {
             ?>
             <p><a href="../public/index.php?route=flagComment&commentId=<?= $comment->getId(); ?>">Signaler le commentaire</a></p>
             <?php
@@ -43,7 +48,14 @@ if ($this->session->get('role') === 'admin')
         <hr>
         <h3>Ajouter un commentaire</h3>
         <?php
-        include('../templates/form_comment.php');
+        if ($this->session->get('pseudo')) 
+        {
+            include('form_comment.php');
+        }
+        else
+        {
+            echo '<em>vous devez être connecté pour poster un commentaire.</em>';
+        }
     }
     ?>
 </div>

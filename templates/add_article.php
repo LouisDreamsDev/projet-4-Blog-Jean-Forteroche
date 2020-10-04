@@ -12,6 +12,7 @@ $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
         <textarea id="content" name="content"><?= isset($post) ? htmlspecialchars($post->get('content')): ''; ?></textarea><br>
         <?= isset($errors['content']) ? $errors['content'] : ''; ?>
         <input class="btn btn-primary"type="submit" value="<?= $submit; ?>" id="submit" name="submit">
+        <input class="form-control" type="text" placeholder="Readonly input here..." readonly>
     </div>
 </form>
 
