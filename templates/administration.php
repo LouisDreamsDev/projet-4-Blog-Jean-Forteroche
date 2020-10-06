@@ -5,16 +5,16 @@
 <?= $this->session->show('unflag_comment'); ?>
 <?= $this->session->show('delete_comment'); ?>
 <?= $this->session->show('delete_user'); ?>
-<h2>Articles</h2>
+<h2 class="alert alert-info text-center text-muted">Articles</h2>
 <a href="../public/index.php?route=addArticle">Nouvel article</a>
-<table>
+<table class="table table-bordered">
     <tr>
-        <td>Id</td>
-        <td>Titre</td>
-        <td>Contenu</td>
-        <td>Auteur</td>
-        <td>Date</td>
-        <td>Actions</td>
+        <th scope="col">Id</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Contenu</th>
+        <th scope="col">Auteur</th>
+        <th scope="col">Date</th>
+        <th scope="col">Actions</th>
     </tr>
     <?php
     foreach ($articles as $article)
@@ -27,8 +27,8 @@
             <td><?= htmlspecialchars($article->getAuthor());?></td>
             <td>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></td>
             <td>
-                <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
-                <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
+                <a class="btn btn-outline-secondary" href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
+                <a class="btn btn-danger" href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
             </td>
         </tr>
         <?php
@@ -36,14 +36,14 @@
     ?>
 </table>
 
-<h2>Commentaires signalés</h2>
-<table>
+<h2 class="alert alert-info text-center text-muted">Commentaires signalés</h2>
+<table class="table table-bordered">
     <tr>
-        <td>Id</td>
-        <td>Pseudo</td>
-        <td>Message</td>
-        <td>Date</td>
-        <td>Actions</td>
+        <th scope="col">Id</th>
+        <th scope="col">Pseudo</th>
+        <th scope="col">Message</th>
+        <th scope="col">Date</th>
+        <th scope="col">Actions</th>
     </tr>
     <?php
     foreach ($comments as $comment)
@@ -55,8 +55,8 @@
             <td><?= substr(htmlspecialchars($comment->getContent()), 0, 150);?></td>
             <td>Créé le : <?= htmlspecialchars($comment->getCreatedAt());?></td>
             <td>
-                <a href="../public/index.php?route=unflagComment&commentId=<?= $comment->getId(); ?>">Désignaler le commentaire</a>
-                <a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a>
+                <a class="btn btn-outline-success" href="../public/index.php?route=unflagComment&commentId=<?= $comment->getId(); ?>">Désignaler</a>
+                <a class="btn btn-danger" href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer</a>
             </td>
         </tr>
         <?php
@@ -64,14 +64,14 @@
     ?>
 </table>
 
-<h2>Utilisateurs</h2>
-<table>
+<h2 class="alert alert-info text-center text-muted">Utilisateurs</h2>
+<table class="table table-bordered">
     <tr>
-        <td>Id</td>
-        <td>Pseudo</td>
-        <td>Date</td>
-        <td>Rôle</td>
-        <td>Actions</td>
+        <th scope="col">Id</th>
+        <th scope="col">Pseudo</th>
+        <th scope="col">Date</th>
+        <th scope="col">Rôle</th>
+        <th scope="col">Actions</th>
     </tr>
     <?php
     foreach ($users as $user)
@@ -86,11 +86,11 @@
                 <?php
                 if($user->getRole() != 'admin') {
                 ?>
-                <a href="../public/index.php?route=deleteUser&userId=<?= $user->getId(); ?>">Supprimer</a>
+                <a class="btn btn-danger" href="../public/index.php?route=deleteUser&userId=<?= $user->getId(); ?>">Supprimer</a>
                 <?php }
                 else {
                     ?>
-                Suppression impossible
+                <span class="border border-danger p-2">Suppression impossible !<span>
                 <?php
                 }
                 ?>

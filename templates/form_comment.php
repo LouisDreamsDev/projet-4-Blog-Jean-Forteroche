@@ -5,7 +5,7 @@ $submit = $route === 'addComment' ? 'Ajouter' : 'Mettre à jour';
 
 <form method="post" action="../public/index.php?route=<?= $route; ?>&articleId=<?= htmlspecialchars($article->getId()); ?>">
     <div class="form-group">
-        <label for="pseudo"></label>
+        <label for="pseudo">Pseudo</label>
         <br>
         <input class="form-control" type="text" id="pseudo" name="pseudo" value="<?= $this->session->get('pseudo') ?>"readonly>
         <br>

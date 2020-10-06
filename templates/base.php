@@ -19,11 +19,14 @@
     if ($this->session->get('pseudo')) 
     {
         ?>
-        <div class="container d-flex p-2 bd-highlight">
+        <div class="container d-flex justify-content-start">
             <a href="../public/index.php?route=logout" class="btn btn-light border rounded">Déconnexion</a>
             <a href="../public/index.php?route=profile" class="btn btn-light border rounded">Profil</a>
         </div>
-        <div class="container d-flex p-2 bd-highlight justify-content-end">
+        <div class="text-muted d-flex justify-content-center">
+            <h4 class="text-nowrap"><small><?= $this->title ?></small></h4>
+        </div>
+        <div class="container d-flex justify-content-end">
         <?php if($this->session->get('role') === 'admin') 
         { ?>
             <a href="../public/index.php?route=addArticle" class="btn btn-light border rounded">Nouvel article</a>
@@ -37,7 +40,7 @@
     else 
     {
         ?>
-        <div class="container d-flex p-2 bd-highlight justify-content-end">
+        <div class="container d-flex justify-content-end mr-0">
             <a href="../public/index.php?route=login" class="btn btn-light border">Connexion</a>
             <a href="../public/index.php?route=register" class="btn btn-light border">Inscription</a>
         </div>
