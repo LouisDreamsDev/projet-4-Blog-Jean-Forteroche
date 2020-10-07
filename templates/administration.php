@@ -23,11 +23,11 @@
         <tr>
             <td><?= htmlspecialchars($article->getId());?></td>
             <td><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></td>
-            <td><?= substr(htmlspecialchars($article->getContent()), 0, 50);?></td>
+            <td><?= substr($article->getContent(), 0, 50);?></td>
             <td><?= htmlspecialchars($article->getAuthor());?></td>
             <td>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></td>
-            <td>
-                <a class="btn btn-outline-secondary" href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
+            <td class="d-flex justify-content-end">
+                <a class="btn btn-outline-secondary mr-1" href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
                 <a class="btn btn-danger" href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
             </td>
         </tr>
@@ -54,8 +54,8 @@
             <td><?= htmlspecialchars($comment->getPseudo());?></td>
             <td><?= substr(htmlspecialchars($comment->getContent()), 0, 150);?></td>
             <td>Créé le : <?= htmlspecialchars($comment->getCreatedAt());?></td>
-            <td>
-                <a class="btn btn-outline-success" href="../public/index.php?route=unflagComment&commentId=<?= $comment->getId(); ?>">Désignaler</a>
+            <td class="d-flex justify-content-end">
+                <a class="btn btn-outline-success mr-1" href="../public/index.php?route=unflagComment&commentId=<?= $comment->getId(); ?>">Désignaler</a>
                 <a class="btn btn-danger" href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer</a>
             </td>
         </tr>
@@ -82,11 +82,11 @@
             <td><?= htmlspecialchars($user->getPseudo());?></td>
             <td>Créé le : <?= htmlspecialchars($user->getCreatedAt());?></td>
             <td><?= htmlspecialchars($user->getRole());?></td>
-            <td>
+            <td class="d-flex justify-content-end">
                 <?php
                 if($user->getRole() != 'admin') {
                 ?>
-                <a class="btn btn-danger" href="../public/index.php?route=deleteUser&userId=<?= $user->getId(); ?>">Supprimer</a>
+                <a class="btn btn-danger mr-1" href="../public/index.php?route=deleteUser&userId=<?= $user->getId(); ?>">Supprimer</a>
                 <?php }
                 else {
                     ?>

@@ -4,7 +4,7 @@
         <h2><?= htmlspecialchars($article->getTitle());?></h2>
     </div>
     <div class="card-body">
-        <p class="card-text text-justify"><?= htmlspecialchars($article->getContent());?></p>
+        <div class="card-text text-justify"><?= $article->getContent();?></div>
     </div>
     <div class="card-footer text-muted">
         <em>Posté le : <?= htmlspecialchars($article->getCreatedAt());?> par <?= htmlspecialchars($article->getAuthor());?></em>

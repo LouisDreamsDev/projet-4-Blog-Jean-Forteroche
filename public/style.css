@@ -29,7 +29,13 @@ header .btn-light
 .form-group
 {
     margin: auto;
-    width: 300px;
+    width: 30%;
+    max-width: 300px;
+}
+#add_article
+{
+    max-width: 800px;
+    margin: auto;
 }
 .signal-comment
 {
