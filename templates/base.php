@@ -14,40 +14,42 @@
         <a class="text-dark" href="../public/index.php"><h1 id="main-title">Billet simple pour L'Alaska</h1></a>
         <p> - <em>Jean Forteroche</em> - </p>
     </div>
-    <div class="d-flex p-2 bd-highlight">
     <?php
-    if ($this->session->get('pseudo')) 
+    if ($this->session->get('pseudo'))
     {
         ?>
-        <div class="container d-flex justify-content-start">
-            <a href="../public/index.php?route=logout" class="btn btn-light border rounded">Déconnexion</a>
-            <a href="../public/index.php?route=profile" class="btn btn-light border rounded">Profil</a>
-        </div>
-        <div class="text-muted d-flex justify-content-center">
-            <h4 class="text-nowrap"><small><?= $this->title ?></small></h4>
-        </div>
-        <div class="container d-flex justify-content-end">
+        <div class="d-flex p-2 bd-highlight">
+            <div class="container d-flex justify-content-start">
+                <a href="../public/index.php?route=logout" class="btn btn-light border rounded">Déconnexion</a>
+                <a href="../public/index.php?route=profile" class="btn btn-light border rounded">Profil</a>
+            </div>
+            <div class="text-muted d-flex justify-content-center">
+                <h4 class="text-nowrap"><small><?= $this->title ?></small></h4>
+            </div>
+        
+            <div class="container d-flex justify-content-end">
         <?php if($this->session->get('role') === 'admin') 
-        { ?>
-            <a href="../public/index.php?route=addArticle" class="btn btn-light border rounded">Nouvel article</a>
-            <a href="../public/index.php?route=administration" class="btn btn-light border rounded">Administration</a>
-        </div>
-        <?php 
+            { 
+                ?>
+                    <a href="../public/index.php?route=addArticle" class="btn btn-light border rounded">Nouvel article</a>
+                    <a href="../public/index.php?route=administration" class="btn btn-light border rounded">Administration</a>
+                    <?php 
+            } 
+            ?>
+            </div>
+            <?php
         } 
+        else 
+        {
+            ?>
+            <div class="container d-flex justify-content-end mr-0">
+                <a href="../public/index.php?route=login" class="btn btn-light border">Connexion</a>
+                <a href="../public/index.php?route=register" class="btn btn-light border">Inscription</a>
+            </div>
+            <?php
+        }
         ?>
-        <?php
-    } 
-    else 
-    {
-        ?>
-        <div class="container d-flex justify-content-end mr-0">
-            <a href="../public/index.php?route=login" class="btn btn-light border">Connexion</a>
-            <a href="../public/index.php?route=register" class="btn btn-light border">Inscription</a>
         </div>
-        <?php
-    }
-    ?>
-    </div>
     <hr>
 </header>
 <div id="content">

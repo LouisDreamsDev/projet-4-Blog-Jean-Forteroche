@@ -58,7 +58,7 @@ class UserDAO extends DAO
             'isPasswordValid' => $isPasswordValid
         ];
     }
-
+    
     public function updatePassword(Parameter $post, $pseudo)
     {
         $sql = 'UPDATE user SET password = ? WHERE pseudo = ?';
