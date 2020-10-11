@@ -58,5 +58,31 @@
 <div id="content">
     <?= $content ?>
 </div>
+<footer class="sticky-bottom py-4 d-flex justify-content-around border-top">
+    <div class="1">
+        <ul>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+        </ul>
+    </div>
+    <div class="2">
+        <ul>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+        </ul>
+    </div>
+    <div class="3">
+        <ul>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>

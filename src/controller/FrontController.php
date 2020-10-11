@@ -27,13 +27,14 @@ class FrontController extends Controller
     public function register(Parameter $post)
     {
         if($post->get('submit')) {
+            var_dump($post->get('submit'));
             $errors = $this->validation->validate($post, 'User');
             if($this->userDAO->checkUser($post)) {
                 $errors['pseudo'] = $this->userDAO->checkUser($post);
             }
             if(!$errors) {
                 $this->userDAO->register($post);
-                $this->session->set('register', 'Votre inscription a bien été effectuée');
+                $this->session->set('register', 'Votre inscription a bien été effectuée !');
                 header('Location: ../public/index.php');
             }
             return $this->view->render('register', [
@@ -50,7 +51,7 @@ class FrontController extends Controller
         if($post->get('submit')) {
             $result = $this->userDAO->login($post);
             if($result && $result['isPasswordValid']) {
-                $this->session->set('login', 'Content de vous revoir');
+                $this->session->set('login', 'Content de vous revoir !');
                 $this->session->set('id', $result['result']['id']);
                 $this->session->set('role', $result['result']['name']);
                 $this->session->set('pseudo', $post->get('pseudo'));
