@@ -3,6 +3,15 @@
     font-family: fresh-tea;
     src: url(../typo/FRESH_TEA-Demo.ttf);
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  #content {
+    flex: 1;
+  }
 hr 
 {
     width: 90%;

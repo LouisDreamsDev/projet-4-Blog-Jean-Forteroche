@@ -23,9 +23,6 @@
                 <a href="../public/index.php?route=logout" class="btn btn-light border rounded">Déconnexion</a>
                 <a href="../public/index.php?route=profile" class="btn btn-light border rounded">Profil</a>
             </div>
-            <div class="text-muted d-flex justify-content-center">
-                <h4 class="text-nowrap"><small><?= $this->title ?></small></h4>
-            </div>
         
             <div class="container d-flex justify-content-end">
         <?php if($this->session->get('role') === 'admin') 
@@ -49,6 +46,10 @@
             <?php
         }
         ?>
+        <hr>
+        </div>
+        <div class="text-muted d-flex justify-content-center">
+            <h4 class="text-nowrap"><small><?= $this->title ?></small></h4>
         </div>
     <hr>
 </header>
@@ -58,7 +59,8 @@
 <div id="content">
     <?= $content ?>
 </div>
-<footer class="sticky-bottom py-4 d-flex justify-content-around border-top">
+<hr>
+<footer class="absolute-bottom py-4 d-flex justify-content-around">
     <div class="1">
         <ul>
             <li><a href="">link</a></li>

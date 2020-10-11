@@ -15,15 +15,13 @@ $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
     </div>
 </form>
 
-<div class="tiny">
-    <script>
-        tinymce.init({
-        selector: 'textarea',
-        height: 400,
-        plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste',
-        toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
-        toolbar_mode: 'floating',
-        branding: false
-        });
-    </script>
-</div>
+<script>
+    tinymce.init({
+    selector: 'textarea',
+    height: 400,
+    plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinymcespellchecker',
+    toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+    toolbar_mode: 'floating',
+    branding: false
+    });
+</script>

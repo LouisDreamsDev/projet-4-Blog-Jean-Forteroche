@@ -27,7 +27,6 @@ class FrontController extends Controller
     public function register(Parameter $post)
     {
         if($post->get('submit')) {
-            var_dump($post->get('submit'));
             $errors = $this->validation->validate($post, 'User');
             if($this->userDAO->checkUser($post)) {
                 $errors['pseudo'] = $this->userDAO->checkUser($post);
