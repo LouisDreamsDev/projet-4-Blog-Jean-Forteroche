@@ -1,10 +1,10 @@
 <?php $this->title = 'Administration'; ?>
-<?php echo '<p class="alert alert-success text-center">'.$this->session->show('add_article').'</p>'; ?>
-<?php echo '<p class="alert alert-success text-center">'.$this->session->show('edit_article').'</p>'; ?>
-<?php echo '<p class="alert alert-success text-center">'.$this->session->show('delete_article').'</p>' ; ?>
-<?php echo '<p class="alert alert-success text-center">'.$this->session->show('unflag_comment').'</p>' ; ?>
-<?php echo '<p class="alert alert-success text-center">'.$this->session->show('delete_comment').'</p>' ; ?>
-<?php echo '<p class="alert alert-success text-center">'.$this->session->show('delete_user').'</p>'; ?>
+<?= $this->session->show('add_article'); ?>
+<?= $this->session->show('edit_article'); ?>
+<?= $this->session->show('delete_article'); ?>
+<?= $this->session->show('unflag_comment'); ?>
+<?= $this->session->show('delete_comment'); ?>
+<?= $this->session->show('delete_user'); ?>
 <h2 class="alert alert-info text-center text-muted">Articles</h2>
 <a href="../public/index.php?route=addArticle">Nouvel article</a>
 <table class="table table-bordered">

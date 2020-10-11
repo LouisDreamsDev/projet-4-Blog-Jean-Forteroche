@@ -52,6 +52,9 @@
         </div>
     <hr>
 </header>
+<div id="js-box">
+
+</div>
 <div id="content">
     <?= $content ?>
 </div>
