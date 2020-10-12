@@ -31,7 +31,7 @@ class FrontController extends Controller
             if($this->userDAO->checkUser($post)) {
                 $errors['pseudo'] = $this->userDAO->checkUser($post);
             }
-            if(!$errors) {
+                if(!$errors) {
                 $this->userDAO->register($post);
                 $this->session->set('register', 'Votre inscription a bien été effectuée !');
                 header('Location: ../public/index.php');

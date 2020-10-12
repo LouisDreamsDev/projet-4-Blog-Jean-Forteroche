@@ -2,6 +2,8 @@
 
 namespace App\src\constraint;
 
+use App\config\Parameter;
+
 class Constraint
 {
     public function notBlank($name, $value)
@@ -14,14 +16,14 @@ class Constraint
     public function minLength($name, $value, $minSize)
     {
         if(strlen($value) < $minSize) {
-            return '<p>Le champ '.$name.' doit contenir au moins '.$minSize.' caractères</p>';
+            return '<p>Le champ '.$name.' doit contenir au moins '.$minSize.' caractères !</p>';
         }
     }
 
     public function maxLength($name, $value, $maxSize)
     {
         if(strlen($value) > $maxSize) {
-            return '<p>Le champ '.$name.' doit contenir au maximum '.$maxSize.' caractères</p>';
+            return '<p>Le champ '.$name.' doit contenir au maximum '.$maxSize.' caractères.</p>';
         }
     }
 
@@ -32,4 +34,5 @@ class Constraint
             return '<p>Votre '.$name.' ne peut contenir que des lettres. <br> '.$value.' n\'est donc pas valide.</p>';
         }
     }
+
 }

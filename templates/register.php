@@ -12,9 +12,6 @@
         <input class="form-control"type="password" id="password" name="password">
         <br>
         <?= isset($errors['password']) ? $errors['password'] : ''; ?>
-        <label for="confirm-password">Encore une fois..</label>
-        <input class="form-control" type="password" id="confirm_password" name="confirm_password">
-        <br>
         <input class="btn btn-primary" type="submit" value="Inscription" id="submit" name="submit">
     </div>
 </form>

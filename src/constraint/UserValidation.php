@@ -14,7 +14,7 @@ class UserValidation extends Validation
     }
 
     public function check(Parameter $post)
-    {
+    {   
         foreach ($post->all() as $key => $value) 
         {
             $this->checkField($key, $value);

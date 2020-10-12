@@ -25,10 +25,6 @@ header .btn-light
 {
     margin: 0 8px 0 8px;
 }
-#js-box
-{
-    display: none;
-}
 .card 
 {
     margin: auto;
@@ -57,4 +53,29 @@ header .btn-light
 .signal-comment
 {
     margin: 6px 0 0 0;
+}
+footer 
+{
+    display: flex;
+    justify-content: space-around;
+    
+}
+footer .list-group
+{
+    margin: 12px;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 575.98px)
+{
+    footer
+    {
+        flex-direction: column;
+    }
+    footer .list-group
+    {
+        margin: 0;
+    }
 }
