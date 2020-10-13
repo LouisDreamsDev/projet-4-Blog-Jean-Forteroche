@@ -71,10 +71,10 @@
     </div>
     <div id="footer-part-2" class="container">
         <ul class="list-group row text-center">
-            <li class="col list-group-item list-group-item-success">Ce projet est réalisé dans le cadre de la formation Développeur Web Junior d'<a href="https://openclassrooms.com/fr/">OpenClassrooms</a>.</li>
+            <li class="col list-group-item list-group-item-info">Ce projet est réalisé dans le cadre de la formation Développeur Web Junior d'<a href="https://openclassrooms.com/fr/">OpenClassrooms</a>.</li>
             <li class="col list-group-item list-group-item-info">Tu es étudiant / mentor OC et a un conseil ou une question ? envoye moi un message sur le <a href="https://openclassrooms.workplace.com/profile.php?id=100034156524250">Workplace</a> !</li>
-            <li class="col list-group-item list-group-item-warning">Tu peux aussi m'envoyer un mail : <a href="mailto:hencore.dev@protonmail.com">hencore.dev@protonmail.com</a>.</li>
-            <li class="col list-group-item list-group-item-dark">Retrouve également ce projet sur <a href="https://github.com/henc0re/projet-4-Blog-Jean-Forteroche">github</a>.</li>
+            <li class="col list-group-item list-group-item-info">Tu peux aussi m'envoyer un mail : <a href="mailto:hencore.dev@protonmail.com">hencore.dev@protonmail.com</a>.</li>
+            <li class="col list-group-item list-group-item-info">Retrouve également ce projet sur <a href="https://github.com/henc0re/projet-4-Blog-Jean-Forteroche">github</a>.</li>
         </ul>
     </div>
 </footer>
