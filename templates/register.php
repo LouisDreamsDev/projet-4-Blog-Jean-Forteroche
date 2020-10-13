@@ -10,8 +10,13 @@
         <label for="password">Mot de passe</label>
         <br>
         <input class="form-control"type="password" id="password" name="password">
-        <br>
         <?= isset($errors['password']) ? $errors['password'] : ''; ?>
+        <br>
+        <label for="password">Confirmation du mot de passe</label>
+        <br>
+        <input class="form-control"type="password" id="password" name="confirm_password">
+        <?= isset($errors['password_confirm']) ? $errors['password_confirm'] : ''; ?>
+        <br>
         <input class="btn btn-primary" type="submit" value="Inscription" id="submit" name="submit">
     </div>
 </form>

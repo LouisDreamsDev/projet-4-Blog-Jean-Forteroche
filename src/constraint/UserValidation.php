@@ -15,10 +15,16 @@ class UserValidation extends Validation
 
     public function check(Parameter $post)
     {   
+        if($post->get('password') !== $post->get('confirm_password'))
+        {
+            $this->addError('password_confirm', 'les mots de passe sont différents !');
+        }
+
         foreach ($post->all() as $key => $value) 
         {
             $this->checkField($key, $value);
         }
+        print_r($this->errors);
         return $this->errors;
     }
 

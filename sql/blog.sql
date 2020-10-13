@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 07, 2020 at 06:26 PM
+-- Generation Time: Oct 12, 2020 at 08:17 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -65,8 +65,8 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `pseudo`, `content`, `createdAt`, `flag`, `article_id`) VALUES
-(1, 'Jean', 'je suis un commentaire', '2020-10-04 12:15:44', 1, 10),
-(15, 'user0', 'je suis un autre commentaire.', '2020-10-04 12:44:37', 0, 10);
+(1, 'Jean', 'je suis un commentaire', '2020-10-04 12:15:44', 0, 10),
+(15, 'user0', 'je suis un autre commentaire.', '2020-10-04 12:44:37', 1, 10);
 
 -- --------------------------------------------------------
 
@@ -107,7 +107,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `pseudo`, `password`, `createdAt`, `role_id`) VALUES
 (10, 'user0', '$2y$10$451QWe2gYIRMI6/YkuYF/OfyGuVlNivB1MV1Dq/J3t2X8TmFBomye', '2020-10-01 11:22:38', 0),
-(16, '123', '$2y$10$F2Yl4nfF14OKH.HG8V77eegaGnPAHOMshzptZug20z0KbDcdKzanm', '2020-10-01 19:20:15', 1);
+(17, 'test', '$2y$10$mbeyhg3VQKcIXTK1xpkkROwpylAbXCUuShl9CZp4c1a5MOUmU3vgy', '2020-10-08 23:54:10', 1);
 
 --
 -- Indexes for dumped tables
@@ -166,7 +166,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables

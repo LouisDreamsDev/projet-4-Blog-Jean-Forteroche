@@ -14,4 +14,3 @@
         <input class="btn btn-primary" type="submit" value="Mettre à jour" id="submit" name="submit">
     </div>
 </form>
-
