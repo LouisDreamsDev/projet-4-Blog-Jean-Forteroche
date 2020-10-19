@@ -110,7 +110,7 @@ class BackController extends Controller
                 if(!$errors) {
                     $this->commentDAO->addComment($post, $articleId);
                     $this->session->set('add_comment', 'Le nouveau commentaire a bien été ajouté');
-                    header('Location: ../public/index.php?route=article&'.$articleId);
+                    header('Location: ../public/index.php?route=article&articleId='.$articleId);
                 }
                 $article = $this->articleDAO->getArticle($articleId);
                 $comments = $this->commentDAO->getCommentsFromArticle($articleId);

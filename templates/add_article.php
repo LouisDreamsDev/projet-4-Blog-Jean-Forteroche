@@ -12,7 +12,7 @@ $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
         <?= isset($errors['title']) ? $errors['title'] : ''; ?>
         <label for="content">Contenu</label>
         <br>
-        <textarea id="content" name="content"><?= isset($post) ? htmlspecialchars($post->get('content')): ''; ?></textarea>
+        <textarea id="addcontent-article" name="content"><?= isset($post) ? htmlspecialchars($post->get('content')): ''; ?></textarea>
         <br>
         <?= isset($errors['content']) ? $errors['content'] : ''; ?>
         <input class="btn btn-primary"type="submit" value="<?= $submit; ?>" id="submit" name="submit">
