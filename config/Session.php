@@ -29,7 +29,7 @@ class Session
         {
             $key = $this->get($name);
             $this->remove($name);
-            return $key;
+            return '<p class="alert alert-success text-center">'.$key.'</p>';
         }
     }
 
